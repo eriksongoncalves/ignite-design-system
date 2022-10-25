@@ -2,32 +2,23 @@
   "name": "@ignite-ui/react",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/index.js",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts",
-    "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
-    "lint": "eslint src --ext ts,tsx --max-warnings=0",
-    "prettier": "prettier --check '*/**/*.{ts,tsx}'"
+    "dev": "tsup src/index.ts --format esm,cjs --dts --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@types/react": "^18.0.21",
-    "@typescript-eslint/eslint-plugin": "^5.40.1",
-    "@typescript-eslint/parser": "^5.40.1",
-    "eslint": "^8.26.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.6.1",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.31.10",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "prettier": "^2.7.1",
-    "tsup": "^6.3.0",
-    "typescript": "^4.8.4"
-  },
   "dependencies": {
     "react": "^18.2.0"
-  }
+  },
+  "devDependencies": {
+    "@ignite-ui/tokens": "*",
+    "@types/react": "^18.0.21",
+    "tsup": "^6.3.0",
+    "typescript": "^4.8.4"
+  }  
 }
